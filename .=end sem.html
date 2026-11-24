@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sign Up</h2>
+
+<form id=“form”>
+
+    <input id=“name” placeholder=“Name” required><br><br>
+
+    <input id=“email” type=“email”
+    placeholder=“Email” required><br><br>
+
+    <input id=“pass” type=“password”
+    placeholder=“Password” required><br><br>
+
+    <button>Sign Up</button>
+
+</form>
+
+<p id=“msg”></p>
+
+<script>
+
+form.onsubmit = function(e) {
+
+    e.preventDefault();
+
+    let user = {
+        name: name.value,
+        email: email.value,
+        password: pass.value
+    };
+
+    localStorage.setItem(“user”,
+    JSON.stringify(user));
+
+    msg.innerHTML = “Signup Successful”;
+
+};
+
+</script>
+
+</body>
+</html>
